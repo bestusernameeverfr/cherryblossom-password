@@ -18,6 +18,11 @@
         checkPassword();
       }
     });
+
+    // Clear the password field every time the page is loaded
+    window.onload = function() {
+      document.getElementById("password").value = "";
+    };
   </script>
   <style>
     body {
@@ -56,4 +61,7 @@
   <div class="box">
     <h2>Enter the Password</h2>
     <input type="password" id="password" placeholder="Password">
-    <button onclick="checkPassword()">Sub
+    <button onclick="checkPassword()">Submit</button>
+  </div>
+</body>
+</html>
