@@ -11,6 +11,13 @@
         alert("Incorrect password, try again!");
       }
     }
+
+    // Allow the user to press "Enter" to submit the password
+    document.addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        checkPassword();
+      }
+    });
   </script>
   <style>
     body {
@@ -49,7 +56,4 @@
   <div class="box">
     <h2>Enter the Password</h2>
     <input type="password" id="password" placeholder="Password">
-    <button onclick="checkPassword()">Submit</button>
-  </div>
-</body>
-</html>
+    <button onclick="checkPassword()">Sub
